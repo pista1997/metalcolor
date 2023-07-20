@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetalColor</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <link href="css/fa-css/fontawesome.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+
+    <script src="https://kit.fontawesome.com/5d3c8adf66.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="pre-header animate__faster" id="pre-header">
+        
+                <span><i class="fa fa-location-dot"></i><a href="https://www.google.com/maps/place/Metal+Color+-+Roman+Trnavsk%C3%BD/@48.8987168,18.0016252,13.75z/data=!4m10!1m2!2m1!1smetalcolor!3m6!1s0x4714a194e7dc2651:0x58ca4caa8da81f0!8m2!3d48.9017134!4d18.0246795!15sCgptZXRhbGNvbG9ykgEWcG93ZGVyX2NvYXRpbmdfc2VydmljZeABAA!16s%2Fg%2F1v2d_788">Kasárenská 5, Trenčín</a></span>
+                <span><i class="fa fa-phone"></i><a href="tel:+421917569295">+421 917 569 295</a></span>
+                <span><i class="fa fa-envelope"></i><a href="mailto:metalcolor@metalcolor.sk">metalcolor@metalcolor.sk</a></span>    
+            </div>
+            
+            <div class="header-bar" id="header-bar">
+                <div class="logo">
+                    <a href="index.html">
+                        METAL <br> <span>c</span><span>o</span><span>l</span><span>o</span><span>r</span>
+                    </a>
+                </div>
+                <div class="hamburger">&#9776; </div>
+
+                <nav class="nav-bar animate__animated animate__backInRight">
+                    <ul>
+                        <li ><a href="#home">Ponuka ⮟</a>
+                            <ul>
+                                <li><a href="#">Práškové lakovanie</a></li>
+                                <li><a href="#">Pieskovanie</a></li>
+                                <li><a href="#">Šopovanie</a></li>
+                                <li><a href="#">Titánovanie</a></li>
+                            </ul>
+                        </li>
+                            
+                        <li><a href="#services">Galéria</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                        <button onclick="form_show()" class="menu-btn material-bubble">Mám záujem</button>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+       
+
+        <div class="top-slider-wrapper">
+            <div class="top-slider ">
+                <table class="pre-header-m">
+                    <tr>
+                        <td><i class="fa fa-location-dot"></i></td>
+                        <td><a href="https://www.google.com/maps/place/Metal+Color+-+Roman+Trnavsk%C3%BD/@48.8987168,18.0016252,13.75z/data=!4m10!1m2!2m1!1smetalcolor!3m6!1s0x4714a194e7dc2651:0x58ca4caa8da81f0!8m2!3d48.9017134!4d18.0246795!15sCgptZXRhbGNvbG9ykgEWcG93ZGVyX2NvYXRpbmdfc2VydmljZeABAA!16s%2Fg%2F1v2d_788">Kasárenská 5, Trenčín</a></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-phone"></i></td>
+                        <td><a href="tel:+421917569295">+421 917 569 295</a></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-envelope"></i></td>
+                        <td><a href="mailto:metalcolor@metalcolor.sk">metalcolor@metalcolor.sk</a></td>
+                    </tr>
+                </table>
+                
+                <div class="container banner">
+                    <h1 class="animate__animated animate__pulse">Povrchová úprava kovov</h1>
+                    <h2>Pieskovanie a práškové lakovanie kovových výrobkov, dielov a konštrukcií.</h2>
+                    <button onclick="form_show()" class="material-bubble">Mám záujem</button>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <div class="form" id="form1">
+        <div class="contact-info">
+            <h3>V prípade záujmu nás neváhajte kontaktovať</h3>
+            <p>Potrebujete nalakovať kovové súčiastky, diely či konštrukcie alebo zbaviť ich hrdze, oxidácie alebo starých náterov ? <br></p>
+            <p>Neváhajte a kontaktujte nás prostredníctvom kontaktného formulára alebo telefonicky.</p>
+            <div class="info">
+                <div class="information">
+                    <i class="fa fa-location-dot"></i>Kasárenská 5, Trenčín
+                </div>
+                <div class="information">
+                    <i class="fa fa-phone"></i><a href="tel:+421917569295">+421 917 569 295</a>
+                </div>
+                <div class="information">
+                  <i class="fa fa-envelope"></i><a href="mailto:metalcolor@metalcolor.sk">metalcolor@metalcolor.sk</a>
+                </div> 
+            </div>
+            <div id="exit-btn">
+                &times;
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <form id="javascript-form">
+                <h3>Kontaktný formulár</h3>
+                <p>Napíšte nám a my sa vám ozveme.</p>
+                <div class="input-container">
+                    <input type="text" name="name" placeholder="Meno" class="input" required/>
+                    <span>Meno</span>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Email" class="input" required/>
+                    <span>Email</span>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="phone_num" placeholder="Telefónne číslo" class="input"/>
+                    <span>Telefónne číslo</span>
+                </div>
+                <div class="input-container textarea">
+                    <textarea name="text" placeholder="Správa" class="input" required></textarea>
+                    <span>Správa</span>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" name="gdpr" required>
+                    <label for="gdpr">Súhlasím so spracovaním osobných údajov. <a href="#">Viac info</a> </label>
+                </div>
+               
+                <input type="submit" id="js_send" value="Odoslať"/>
+            
+                <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                <p id="form-powered">Powered by <a href="https://postmail.invotes.com"  target="_blank">PostMail</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <main class="content">
+        
+
+        <div class="container service-package">
+            <h1>Ponúkame vám kompletný balík služieb</h1>
+            <div class="s-items">
+                <div class="s-item flexible">
+                    <img src="img/icons/preparation.png" alt="" height="70" width="70">
+                    <p>Návrh vhodnej predúpravy</p>
+                    
+                </div>
+                <div class="s-item flexible">
+                    <img src="img/icons/color-palette.png" alt="" height="70" width="70">
+                    <p>Poradenstvo pri výbere farby</p>
+                    
+                </div>
+                <div class="s-item flexible">
+                    <img src="img/icons/box.png" alt="" height="70" width="70">
+                    <p>Balenie hotových výrobkov podľa požiadaviek</p>
+                </div>
+                <div class="s-item flexible">
+                    <img src="img/icons/boxes.png" alt="" height="70" width="70">
+                    <p>Príprava tovaru k expedovaniu</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="section-type-1">
+            <div class="container">
+                <div class="service-row">
+                    <div class="service-text padd-r">
+                        <h1>Práškové lakovanie</h1>
+                        <ul>
+                            <li>
+                                <span class=""><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Práškové lakovanie je moderná technológia nanášania farieb na kovové materiály. </span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Výsledkom je povrchová úprava s vysokou mechanickou odolnosťou.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>V ponuke máme širokú škálu farieb .</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Rozmery vypalovacej pece – 1,6m x 1m x 9m</span>
+                            </li>
+                        </ul>
+                        
+                        
+                    </div>
+                    <div class="service-img">
+                        <picture>
+                            <source 
+                               media="(max-width: 860px)"
+                               srcset="img/img1-m.jpg">
+                            <img src="img/img1.jpg" 
+                            alt="praskove lakovanie">
+                         </picture>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="section-type-2">
+            <div class="container">
+                <div class="service-row">
+                    <div class="service-img">
+                        <picture>
+                            <source 
+                               media="(max-width: 860px)"
+                               srcset="img/img2-m.jpg">
+                            <img src="img/img2.jpg" 
+                            alt="praskove lakovanie">
+                         </picture>
+                    </div>
+                    <div class="service-text padd-l">
+                        <h2>Čo vám nalakujeme?</h2>
+                        <ul>
+                            <li>
+                                <span class=""><i class="fa fa-circle-check"></i></span>
+                                <span>Kovové súčiastky, diely a konštrukcie</span>
+                            </li>
+                            <li>
+                                <span class=""><i class="fa fa-circle-check"></i></span>
+                                <span>Diely karosérie automobilov a motocyklov</span>
+                            </li>
+                            <li>
+                                <span class=""><i class="fa fa-circle-check"></i></span>
+                                <span>Plechové a hlinníkové disky</span>
+                            </li>
+                            <li>
+                                <span class=""><i class="fa fa-circle-check"></i></span>
+                                <span>Rámy bicyklov, konštrukcie, ploty a brány</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>         
+        </div>
+        <div style="text-align:center; margin: 15px 0">
+
+            <button onclick="form_show()" class="menu-btn menu-btn-content material-bubble">Mám záujem</button>
+            <!-- <img src="img/ikony-pieskovanie.png" alt="" width="50">
+            <img src="img/ikony-pieskovanie.png" alt="" width="50">
+            <img src="img/ikony-pieskovanie.png" alt="" width="50">
+            <img src="img/ikony-pieskovanie.png" alt="" width="50">
+            <img src="img/ikony-pieskovanie.png" alt="" width="50"> -->
+    
+        </div>
+        
+    
+        <div class="section-type-1">
+            <div class="container">
+                <div class="service-row">
+                    <div class="service-text padd-r">
+                        <h1>Tryskanie</h1>
+                        <ul>
+                            <li>
+                                <span class=""><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Ide o predúpravu,zbavenie materiálu hrdze,oxidácie,starých náterov a nečistôt.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Tryskanie prevádzame tryskacím zariadením CLEMKO ,v kabíne ktorá ma rozmery 2,5m x 2,5m x 9m.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Ako abrazivo používame liatinovú drť.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Trysaknim sa povrch očistí,zdrsní,čím je pripravený na dalšiu povrchovú úpravu.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-img">
+                        <picture>
+                            <source 
+                               media="(max-width: 860px)"
+                               srcset="img/sandblasting-m.jpg">
+                            <img src="img/sandblasting.jpg" 
+                            alt="praskove lakovanie">
+                         </picture>
+                    </div>
+                      
+                </div>
+            </div>         
+        </div>
+
+        <div class="section-type-2">
+            <div class="container">
+                <div class="service-row">
+                    <div class="service-img">
+                        <picture >
+                            <source 
+                               media="(max-width: 860px)"
+                               srcset="img/sopovanie.jpg">
+                            <img src="img/sopovanie.jpg" class="pic" alt="praskove lakovanie">
+                         </picture>
+                    </div>
+
+                    <div class="service-text padd-l">
+                        <h1>Šopovanie</h1>
+                        <ul>
+                            <li>
+                                <span class=""><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Šopovanie je náhrada za žiarové,respektíve galvanické zinkovanie.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Roztavený zinok sa nanesie na upravovaný materiál.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Vytvorí jednoliata vrstva,ktorá zabranuje korozii.</span>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                     
+                </div>
+            </div>         
+        </div>
+
+        <div class="section-type-1">
+            
+            <div class="container">
+                <div class="service-row">
+                    <div class="service-text padd-r">
+                        <h1>Titánovanie</h1>
+                        <ul>
+                            <li>
+                                <span class=""><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Titánovanie je technológia, pri ktorej sa na povrchu materiálu vytvára titánova vrstva, ktorá zabráni oxidovaniu hliníka.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Takto predupravený  materiál ma vynikajúcu chemickú a koróznu odolnosť.</span>
+                            </li>
+                         
+                        </ul>
+                    </div>
+                    <div class="service-img">
+                        <picture>
+                            <source 
+                               media="(max-width: 860px)"
+                               srcset="img/sopovanie.jpg">
+                            <img src="img/sandblasting.jpg"  class="pic" alt="praskove lakovanie">
+                         </picture>
+                    </div>
+                </div>
+            </div>         
+        </div>
+       
+        <div class="gallery">
+            <div class="gallery-container">
+                <img src="img/gallery/image-1.jpg" class="gallery-item gallery-item-1" data-index="1">
+                <img src="img/gallery/image-2.jpg" class="gallery-item gallery-item-2" data-index="2">
+                <img src="img/gallery/image-3.jpg" class="gallery-item gallery-item-3" data-index="3">
+                <img src="img/gallery/image-4.jpg" class="gallery-item gallery-item-4" data-index="4">
+                <img src="img/gallery/image-5.jpg" class="gallery-item gallery-item-5" data-index="5">
+            </div>
+            <div class="gallery-controls">
+
+            </div>
+        </div>
+           
+    </main>
+
+
+    <footer>
+        <div class="contact" id="contact">
+            <div class="container">
+                <h1>Kontakt</h1>
+               <div class="contact-content">
+                    <section class="contact-left">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41984.12406944641!2d17.98946680539783!3d48.87712872195135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714a194e7dc2651%3A0x58ca4caa8da81f0!2sMetal%20Color%20-%20Roman%20Trnavsk%C3%BD!5e0!3m2!1ssk!2ssk!4v1679934655849!5m2!1ssk!2ssk" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <section class="contact-right">
+                        <h4>Zavolajte nám!</h4>
+                        <p>
+                            <i class="fa fa-phone"></i><a class="phone" href="tel:+421917569295">+421 917 569 295</a>
+                        </p>
+                        <h4>Napíšte nám!</h4>
+                        <p><i class="fa fa-envelope"></i><a href="mailto:metalcolor@metalcolor.sk">metalcolor@metalcolor.sk</a></p>
+                        <h4>Kde nás nájdete?</h4>
+                        <p><i class="fa fa-location-dot"></i>Kasárenská 5, Trenčín</p>
+                    </section>
+               </div>
+                
+            </div>
+        </div>
+        <div class="footer">
+            © 2023 MetalColor | Všetky práva vyhradené.<br> Webdesign by <a href="mailto:pista.kopecky@gmail.com">Štefan Kopecký</a> 
+        </div>
+    </footer>
+
+    <div class="cookie-container">
+        <p>
+            Na našej webovej stránke používame súbory cookies. Prezeraním našej webovej stránky súhlasíte s ich používaním a ukladaním do Vášho prehliadača. <a href="cookie-policies.html">Viac informácií</a>
+        </p>
+
+        <button class="cookie-btn">
+            Rozumiem
+        </button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- <script src="js/gallery.js"></script> -->
+</body>
+</html>
