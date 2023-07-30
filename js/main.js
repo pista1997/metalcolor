@@ -1,54 +1,29 @@
 // Menu toggle
-hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", function() {
-    document.querySelector(".nav-bar").classList.toggle("active");
-    console.log("open");
-})
+const menuBtn = document.querySelector(".hamburger");
+const menu = document.querySelector(".nav-bar");
 
-navbar_items = document.querySelectorAll(".nav-bar ul li a");
-navbar_items.forEach(element => {
-  element.addEventListener("click", function() {
-    document.querySelector(".nav-bar").classList.remove("active");
-  })
-})
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+    menu.classList.remove('active');
+  }
+});
+
+const menuItems = document.querySelectorAll('.nav-bar ul li a');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', function() {
+    menu.classList.remove('active');
+  });
+});
+
 
 //--------------------------------------------------------
 
-// Menu lvl 2 toggle
-// var a = document.getElementById("parent");
-// a.addEventListener("hover", function() {
-//   a.style.height = "fit-content";
-// })
-//_____________________________________________________
 
-//Menu smooth scrolling
-function scroll() {
-    var element = document.querySelector("#about-us");
-
-    element.scrollIntoView();
-}
-//------------------------------------------------------- 
-
-// On scroll animations
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-      // If the element is visible
-      if (entry.isIntersecting) {
-        // Add the animation class
-        entry.target.classList.add('animate__animated');
-        entry.target.classList.add('animate__zoomIn');
-      }
-    });
-  });
-  
-const animated_obj = document.querySelectorAll(".card");
-
-animated_obj.forEach((obj) => {
-    observer.observe(obj);
-})
-//-----------------------------------------------------------
-
+// COOKIE POP-UP
 const cookieContainer = document.querySelector(".cookie-container");
 const cookieButton = document.querySelector(".cookie-btn");
 
@@ -157,28 +132,22 @@ function blurFunc() {
     this.nextElementSibling.classList.remove("focus");
     this.setAttribute('placeholder', placeholder);
   }
-  
-  
 }
 
 inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
-  
 })
 
 // SHOW FORM
 function form_show() {
   var form = document.getElementById("form1");
   var other_elements = document.querySelectorAll("body > *:not(#form1)");
-  form.classList.add("form_activated");
+  
 
   other_elements.forEach((element) => {
     element.classList.add("blur");
   })
-
-  
-  
 }
 
 // HIDE FORM
@@ -191,48 +160,112 @@ function form_hide() {
     element.classList.remove("blur");
     
   })
-
- 
 }
 
+// Zavretie formuláru klikom na tlačidlo X
 var btn_exit = document.getElementById("exit-btn");
 btn_exit.addEventListener("click", form_hide);
 
-// document.addEventListener('click', function(e) {
-//   var form = document.getElementById('form1');
-//   if (!form.contains(e.target) && !form.classList.contains("form_activated")) {
-//       form.style.display = 'none';
-//   }
-// });
+// Po kliknuti na jedno z troch tlacidiel zobrazi formular a ak uzivatel klikne mimo formulara tak ho zavrie 
+document.addEventListener('click', function(event) {
+  var form = document.getElementById('form1');
+  var other_elements = document.querySelectorAll("body > *:not(#form1)");
+  var targetElement = event.target;
+  var openFormButtons = document.getElementsByClassName('openFormButton');
 
-// var header = document.getElementById("header-bar");
-// var container_header = document.getElementsByClassName("container-bar");
+  // Pokud uživatel klikne na některé z tlačítek, formulář zůstane otevřený
+  var clickedButton = Array.from(openFormButtons).find(function(button) {
+    return targetElement === button;
+  });
 
-// header.addEventListener("scroll", function(e) {
- 
-//   console.log(e.currentTarget.scrollTop);
-//   console.log(e.currentTarget.scrollHeight);
-//   header.classList.add("header-bar-scroll")
-// })
+  if (clickedButton) {
+    // event.stopPropagation(); // Zamezí šíření události ven
+    form.classList.add("form_activated");
+    other_elements.forEach((element) => {
+      element.classList.add("blur"); 
+    });
+    return;
+  }
 
+  // Pokud uživatel klikne mimo formulář, formulář se zavře (bude skryt)
+  if (!form.contains(targetElement)) {
+    form.classList.remove("form_activated");
+    other_elements.forEach((element) => {
+      element.classList.remove("blur");
+    });
+  }
+});
+
+
+// TOGGLE PRE-HEADER WHEN SCROLL DOWN
 function toggleHeader() {
-const menu_header = document.getElementById("header-bar");
-const menu_pre_header = document.getElementById("pre-header");
-if (window.pageYOffset > 100) {
+  const menu_header = document.getElementById("header-bar");
+  const menu_pre_header = document.getElementById("pre-header");
+  if (window.pageYOffset > 100) {
 
-  menu_header.classList.remove("animate__backInRight")
-  menu_header.classList.add("header-bar-scroll")
-  menu_pre_header.classList.add("animate__animated");
-  menu_pre_header.classList.add("animate__backOutUp");
+    menu_header.classList.remove("animate__backInRight")
+    menu_header.classList.add("header-bar-scroll")
+    menu_pre_header.classList.add("animate__animated");
+    menu_pre_header.classList.add("animate__backOutUp");
+    
+  }
+  else {
+    menu_pre_header.classList.remove("animate__backOutUp");
+    menu_pre_header.classList.add("animate__backInDown");
+    menu_header.classList.remove("header-bar-scroll")
+  }
 }
-else {
-  menu_pre_header.classList.remove("animate__backOutUp");
-  menu_pre_header.classList.add("animate__backInDown");
-  menu_header.classList.remove("header-bar-scroll")
-}
-  
- 
-}
+
 document.addEventListener("scroll", function() {
   toggleHeader();
 })
+
+
+// GALERIA
+const galleryContainer = document.querySelector('.gallery-container');
+const images = galleryContainer.querySelectorAll('.gallery img');
+
+function enlargeImage(event) {
+  const clickedImage = event.target;
+
+  // Ak obrazok nie je zvacseny, zvacsi ho
+  if (!clickedImage.classList.contains('enlarged')) {
+    images.forEach((image) => {
+      if (image !== clickedImage) {
+        image.style.transform = 'scale(0.8)';
+        image.style.zIndex = 0;
+        image.classList.remove('enlarged');
+      }
+    });
+
+    clickedImage.style.transform = 'scale(1)';
+    clickedImage.style.zIndex = 10;
+    clickedImage.classList.add('enlarged');
+  } else {
+    // Ak obrazok uz je zvacseny, zmenime ho naspat na povodnu velkost
+    clickedImage.style.transform = 'scale(0.8)';
+    clickedImage.style.zIndex = 0;
+    clickedImage.classList.remove('enlarged');
+  }
+  document.body.style.overflow = 'hidden';
+}
+
+images.forEach((image) => {
+  image.addEventListener('click', enlargeImage);
+});
+
+document.addEventListener('click', (event) => {
+  // Ak klikneme mimo zvacsenych obrazkov, zmenime ich vsetky naspat na povodnu velkost
+  if (!event.target.classList.contains('enlarged')) {
+    images.forEach((image) => {
+      image.style.transform = 'scale(1)';
+      image.style.zIndex = 0;
+      image.classList.remove('enlarged');
+    });
+    document.body.style.overflow = 'visible';
+  }
+});
+
+
+
+
