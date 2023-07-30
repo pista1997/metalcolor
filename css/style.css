@@ -59,8 +59,8 @@ p {
 }
 /* __________________________________ */
 
-#home, #services, #about-us, #contact {
-    scroll-margin-top: 76px;
+#home, #praskove-lakovanie, #sopovanie, #tryskanie, #titanovanie, #ofirme, #gallery, #contact {
+    scroll-margin-top: 97px;
 }
 
 .container {
@@ -117,23 +117,19 @@ p {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    z-index: 99;
+    box-shadow: 0px 5px 10px -7px rgba(0,0,0,0.75);
+    transition: .5s;
 }
 
 .header-bar-scroll {
     max-width: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
     position: fixed;
     padding: 0px 8%;
     width: 100%;
     background: #ffffff;
     top: 0;
     left: 0;
-    z-index: 99;
-    box-shadow: 0px 5px 10px -7px rgba(0,0,0,0.75);
-    transition: .5s;
 }
 
 /* .header-bar-scroll::before {
@@ -244,14 +240,15 @@ p {
 
 .nav-bar ul li:hover ul {
     height: 200px;
-    
 }
+
+
 
 .menu-btn {
     text-transform: uppercase;
     color: #606060 !important; 
     background-color: gold;
-    padding: 10px 15px;
+    padding: 14px 16px;
     border-radius: 5px;
     font-size: 14px;
     border: none;
@@ -508,160 +505,67 @@ button::after, button::before, .card-button::after, .card-button::after {
  }
 
 /* GALLERY */
-.gallery {
-    width: 100%;
+#gallery {
+    background-color: #ededed;
+    padding-bottom: 4em;
+}
+
+#gallery h1 {
+    text-transform: uppercase;
+    border-bottom: 2px solid gold;
+    margin: 0.5em auto 1.5em;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    width: 10em;
+    margin-top: 1.5em;
 }
 
 .gallery-container {
-    align-items: center;
-    display: flex;
-    height: 400px;
-    margin: 0 auto;
-    max-width: 1000px;
     position: relative;
+  }
+  
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
+
 }
 
-.gallery-item {
-    height: 200px;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    width: 330px;
-    z-index: 0;
-    border-radius: 15px;
-    background-size: contain;
+img {
+width: 100%;
+height: auto;
+transition: transform 0.3s ease, z-index 0.3s;
+cursor: pointer;
 }
 
-.gallery-item-1 {
-    left: 15%;
-    opacity: 0.4;
-    transform: translateX(-50%);
+.enlarged {
+width: 90%;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) !important;
 }
 
-.gallery-item-2, .gallery-item-4 {
-    height: 250px;
-    opacity: 0.8;
-    width: 380px;
-    z-index: 1;
+  
+  
+  
+  
+
+
+/* O FIRME */
+#ofirme {
+    background-color: #ededed;
 }
 
-.gallery-item-2 {
-    left: 30%;
-    transform: translateX(-50%);
+.ofirmeBanner h1 {
+    text-transform: uppercase;
+    border-bottom: 2px solid gold;
+    margin: 0.5em auto 1.5em;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    width: 8em;
+    margin-top: 1.5em;
 }
-
-.gallery-item-3 {
-    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-    height: 300px;
-    width: 430px;
-    opacity: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.gallery-item-4 {
-    left: 70%;
-    transform: translateX(-50%);
-}
-
-.gallery-item-5 {
-    left: 85%;
-    opacity: 0.4;
-    transform: translateX(-50%);
-}
-
-.gallery-controls {
-    display: flex;
-    justify-content: center;
-    margin: 25px 0;
-    height: 100px;
-}
-
-.gallery-controls button {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    font-size: 30px;
-    margin: 0 50px;
-    padding: 0 12px;
-    text-transform: capitalize;
-}
-
-.gallery-controls-button:focus {
-    outline: none;
-}
-
-.gallery-controls-previous {
-    position: relative;
-}
-
-.gallery-controls-previous::before {
-    border: solid #000;
-    border-width: 0 5px 5px 0;
-    content: "";
-    display: inline-block;
-    height: 5px;
-    left: -30px;
-    padding: 10px;
-    position: absolute;
-    top: 25%;
-    transform: rotate(135deg) translateY(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
-}
-
-.gallery-controls-previous:hover::before {
-    left:  -40px;
-}
-
-.gallery-controls-next {
-    position: relative;
-}
-
-.gallery-controls-next::before {
-    border: solid #000;
-    border-width: 0 5px 5px 0;
-    content: "";
-    display: inline-block;
-    height: 5px;
-    left: -30px;
-    padding: 10px;
-    position: absolute;
-    right: -30px;
-    top: 45;
-    transform: rotate(-45deg) translateY(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
-}
-
-.gallery-controls-next:hover::before {
-    right: -40px;
-}
-
-.gallery-nav {
-    bottom: -15px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-}
-
-.gallery-nav li {
-    background: #ccc;
-    border-radius: 50%;
-    height: 10px;
-    margin: 0 16px;
-    width: 10px;
-}
-
-.gallery-nav li.gallery-item-selected {
-    background: #555
-}
-
-
 
 
 
@@ -1068,7 +972,7 @@ button::after, button::before, .card-button::after, .card-button::after {
     }
 
     .content {
-        font-size: 90%;
+        font-size: 95%;
     }
 
     .service-text h1 {
@@ -1266,6 +1170,10 @@ button::after, button::before, .card-button::after, .card-button::after {
         margin-top: 2.75rem;
     }
 
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media only screen and ( max-width: 720px ) {
@@ -1280,7 +1188,7 @@ button::after, button::before, .card-button::after, .card-button::after {
     }
 
     .nav-bar {
-        top: 135px;
+        top: 97px;
       
     }
 
@@ -1348,7 +1256,7 @@ button::after, button::before, .card-button::after, .card-button::after {
 
 
     .nav-bar {
-        top: 70px;
+        top: 69px;
     }
 
     .logo {
@@ -1422,7 +1330,7 @@ button::after, button::before, .card-button::after, .card-button::after {
     }
 
     .hamburger {
-        font-size: 26px;
+        font-size: 32px;
         margin-left: 20px;
     }
 
@@ -1464,6 +1372,9 @@ button::after, button::before, .card-button::after, .card-button::after {
         margin-right: 8px;
         width: 20px;
         font-size: 18px;
+    }
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

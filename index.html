@@ -19,10 +19,10 @@
     <script src="https://kit.fontawesome.com/5d3c8adf66.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    
+    <header id="home">
         <div class="container-header">
             <div class="pre-header animate__faster" id="pre-header">
-        
                 <span><i class="fa fa-location-dot"></i><a href="https://www.google.com/maps/place/Metal+Color+-+Roman+Trnavsk%C3%BD/@48.8987168,18.0016252,13.75z/data=!4m10!1m2!2m1!1smetalcolor!3m6!1s0x4714a194e7dc2651:0x58ca4caa8da81f0!8m2!3d48.9017134!4d18.0246795!15sCgptZXRhbGNvbG9ykgEWcG93ZGVyX2NvYXRpbmdfc2VydmljZeABAA!16s%2Fg%2F1v2d_788">Kasárenská 5, Trenčín</a></span>
                 <span><i class="fa fa-phone"></i><a href="tel:+421917569295">+421 917 569 295</a></span>
                 <span><i class="fa fa-envelope"></i><a href="mailto:metalcolor@metalcolor.sk">metalcolor@metalcolor.sk</a></span>    
@@ -40,16 +40,17 @@
                     <ul>
                         <li ><a href="#home">Ponuka ⮟</a>
                             <ul>
-                                <li><a href="#">Práškové lakovanie</a></li>
-                                <li><a href="#">Pieskovanie</a></li>
-                                <li><a href="#">Šopovanie</a></li>
-                                <li><a href="#">Titánovanie</a></li>
+                                <li><a href="#praskove-lakovanie">Práškové lakovanie</a></li>
+                                <li><a href="#tryskanie">Tryskanie</a></li>
+                                <li><a href="#sopovanie">Šopovanie</a></li>
+                                <li><a href="#titanovanie">Titánovanie</a></li>
                             </ul>
                         </li>
                             
-                        <li><a href="#services">Galéria</a></li>
+                        <li><a href="#gallery">Naše produkty</a></li>
+                        <li><a href="#ofirme">O firme</a></li>
                         <li><a href="#contact">Kontakt</a></li>
-                        <button onclick="form_show()" class="menu-btn material-bubble">Mám záujem</button>
+                        <button class="menu-btn material-bubble openFormButton">Mám záujem</button>
                     </ul>
                 </nav>
             </div>
@@ -78,7 +79,7 @@
                 <div class="container banner">
                     <h1 class="animate__animated animate__pulse">Povrchová úprava kovov</h1>
                     <h2>Pieskovanie a práškové lakovanie kovových výrobkov, dielov a konštrukcií.</h2>
-                    <button onclick="form_show()" class="material-bubble">Mám záujem</button>
+                    <button class="material-bubble openFormButton">Mám záujem</button>
                 </div>
             </div>
         </div>
@@ -171,7 +172,7 @@
             
         </div>
 
-        <div class="section-type-1">
+        <div class="section-type-1" id="praskove-lakovanie">
             <div class="container">
                 <div class="service-row">
                     <div class="service-text padd-r">
@@ -192,6 +193,10 @@
                             <li>
                                 <span><i class="fa fa-circle-arrow-right"></i></span>
                                 <span>Rozmery vypalovacej pece – 1,6m x 1m x 9m</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-circle-arrow-right"></i></span>
+                                <span>Možnosť dekorovania kovových výrobkov (dekor dreva, mramoru, žula a iné)</span>
                             </li>
                         </ul>
                         
@@ -249,18 +254,11 @@
             </div>         
         </div>
         <div style="text-align:center; margin: 15px 0">
-
-            <button onclick="form_show()" class="menu-btn menu-btn-content material-bubble">Mám záujem</button>
-            <!-- <img src="img/ikony-pieskovanie.png" alt="" width="50">
-            <img src="img/ikony-pieskovanie.png" alt="" width="50">
-            <img src="img/ikony-pieskovanie.png" alt="" width="50">
-            <img src="img/ikony-pieskovanie.png" alt="" width="50">
-            <img src="img/ikony-pieskovanie.png" alt="" width="50"> -->
-    
+            <button class="menu-btn menu-btn-content material-bubble openFormButton">Mám záujem</button>
         </div>
         
     
-        <div class="section-type-1">
+        <div class="section-type-1" id="tryskanie">
             <div class="container">
                 <div class="service-row">
                     <div class="service-text padd-r">
@@ -298,7 +296,7 @@
             </div>         
         </div>
 
-        <div class="section-type-2">
+        <div class="section-type-2" id="sopovanie">
             <div class="container">
                 <div class="service-row">
                     <div class="service-img">
@@ -333,8 +331,7 @@
             </div>         
         </div>
 
-        <div class="section-type-1">
-            
+        <div class="section-type-1" id="titanovanie">
             <div class="container">
                 <div class="service-row">
                     <div class="service-text padd-r">
@@ -362,20 +359,54 @@
                 </div>
             </div>         
         </div>
-       
-        <!-- <div class="gallery">
-            <div class="gallery-container">
-                <img src="img/gallery/image-1.jpg" class="gallery-item gallery-item-1" data-index="1">
-                <img src="img/gallery/image-2.jpg" class="gallery-item gallery-item-2" data-index="2">
-                <img src="img/gallery/image-3.jpg" class="gallery-item gallery-item-3" data-index="3">
-                <img src="img/gallery/image-4.jpg" class="gallery-item gallery-item-4" data-index="4">
-                <img src="img/gallery/image-5.jpg" class="gallery-item gallery-item-5" data-index="5">
-            </div>
-            <div class="gallery-controls">
 
+        <div style="text-align:center; margin: 15px 0">
+            <button class="menu-btn menu-btn-content material-bubble openFormButton">Mám záujem</button>
+        </div>
+
+        <div id="gallery">
+            <div class="container">
+                <h1>Naše produkty</h1>
+                <div class="gallery-wrapper">
+                    <div class="gallery-container">
+                        <div class="gallery">
+                            <img src="img/img1.jpg" alt="Obrazok 1">
+                            <img src="img/img2.jpg" alt="Obrazok 1">
+                            <img src="img/img3.jpg" alt="Obrazok 1">
+                            <img src="img/img4.jpg" alt="Obrazok 1">
+                            <img src="img/img5.jpg" alt="Obrazok 1">
+                            <img src="img/img2-m.jpg" alt="Obrazok 1">
+                
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> -->
-           
+        </div>
+
+        <div style="text-align:center; margin: 15px 0">
+            <button class="menu-btn menu-btn-content material-bubble openFormButton">Mám záujem</button>
+        </div>
+
+        <div id="ofirme">
+            <div class="container">
+                <div class="ofirmeBanner">  
+                    <h1>O firme</h1>
+                    <p>Naša firma Metal color s.r.o. bola založená v roku 1998. Zaoberáme sa povrchovou úpravou kovov elektrostatickým nanášaním práškových farieb vo všetkých odtieňoch RAL do maximálnej dĺžky 9m.</p>
+                </div>
+                <div class="ofirmeImage">
+                    <picture>
+                        <source 
+                           media="(max-width: 860px)"
+                           srcset="img/firma-m.png">
+                        <img src="img/firma.png" 
+                        alt="Firma MetalColor">
+                     </picture>
+                </div>
+
+
+            </div>   
+        </div>      
+
     </main>
 
 
